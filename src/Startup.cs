@@ -1,7 +1,5 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Soenneker.Cloudflare.OriginCerts.Fetcher.Registrars;
-using Soenneker.Cloudflare.Runners.OriginCerts.Thumbprints.Utils;
-using Soenneker.Cloudflare.Runners.OriginCerts.Thumbprints.Utils.Abstract;
 using Soenneker.Managers.Runners.Registrars;
 
 namespace Soenneker.Cloudflare.Runners.OriginCerts.Thumbprints;
@@ -20,7 +18,6 @@ public static class Startup
     public static IServiceCollection SetupIoC(this IServiceCollection services)
     {
         services.AddHostedService<ConsoleHostedService>()
-                .AddScoped<IFileOperationsUtil, FileOperationsUtil>()
                 .AddCloudflareOriginCertFetcherAsScoped()
                 .AddRunnersManagerAsScoped();
 

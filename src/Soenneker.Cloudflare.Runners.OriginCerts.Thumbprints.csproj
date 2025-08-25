@@ -36,6 +36,12 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Remove="Utils\**" />
+      <EmbeddedResource Remove="Utils\**" />
+      <None Remove="Utils\**" />
+    </ItemGroup>
+
+    <ItemGroup>
         
         <None Include="..\README.md" Pack="true" PackagePath="\" />
         <None Include="..\LICENSE" Pack="true" PackagePath="\" />
@@ -47,6 +53,6 @@
         <PackageReference Include="Soenneker.Cloudflare.OriginCerts.Fetcher" Version="3.0.1" />
         <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="3.0.1021" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.8" />
-        <PackageReference Include="Soenneker.Managers.Runners" Version="3.0.1273" />
+        <PackageReference Include="Soenneker.Managers.Runners" Version="3.0.1274" />
     </ItemGroup>
 </Project>

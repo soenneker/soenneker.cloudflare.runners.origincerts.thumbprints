@@ -53,7 +53,7 @@ public sealed class ConsoleHostedService : IHostedService
 
                     await _fileUtil.WriteAllLines(tempFilePath, thumbprints, true, cancellationToken).NoSync();
 
-                    await _runnersManager.PushIfChangesNeeded(tempFilePath, Constants.FileName, Constants.Library,
+                    await _runnersManager.AddFileAtPathToRepoIfNeeded(tempFilePath, Constants.FileName, Constants.Library,
                         $"https://github.com/soenneker/{Constants.Library}", cancellationToken);
 
                     _logger.LogInformation("Complete!");
