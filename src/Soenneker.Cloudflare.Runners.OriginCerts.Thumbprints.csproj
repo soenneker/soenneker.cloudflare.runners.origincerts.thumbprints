@@ -50,7 +50,7 @@
 
     <ItemGroup>
         <PackageReference Include="Soenneker.Cloudflare.OriginCerts.Fetcher" Version="4.0.53" />
-        <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="4.0.1120" />
+        <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="4.0.1122" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.2" />
         <PackageReference Include="Soenneker.Managers.Runners" Version="4.0.1704" />
     </ItemGroup>
