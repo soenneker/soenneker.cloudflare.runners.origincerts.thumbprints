@@ -36,12 +36,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Remove="Utils\**" />
-      <EmbeddedResource Remove="Utils\**" />
-      <None Remove="Utils\**" />
-    </ItemGroup>
-
-    <ItemGroup>
         <None Include="..\README.md" Pack="true" PackagePath="\" />
         <None Include="..\LICENSE" Pack="true" PackagePath="\" />
         <None Include="..\icon.png" Pack="true" PackagePath="\" />
