@@ -46,6 +46,6 @@
         <PackageReference Include="Soenneker.Cloudflare.OriginCerts.Fetcher" Version="4.0.93" />
         <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="4.0.1231" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.5" />
-        <PackageReference Include="Soenneker.Managers.Runners" Version="4.0.2021" />
+        <PackageReference Include="Soenneker.Managers.Runners" Version="4.0.2023" />
     </ItemGroup>
 </Project>
