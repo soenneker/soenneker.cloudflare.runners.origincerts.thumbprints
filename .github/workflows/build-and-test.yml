@@ -38,7 +38,7 @@ jobs:
         run: dotnet build test/Soenneker.Cloudflare.Runners.OriginCerts.Thumbprints.Tests/Soenneker.Cloudflare.Runners.OriginCerts.Thumbprints.Tests.csproj --configuration Release --no-restore --verbosity minimal
 
       - name: Test
-        run: dotnet test test/Soenneker.Cloudflare.Runners.OriginCerts.Thumbprints.Tests/Soenneker.Cloudflare.Runners.OriginCerts.Thumbprints.Tests.csproj --configuration Release --no-build --no-restore --verbosity minimal
+        run: dotnet test --project test/Soenneker.Cloudflare.Runners.OriginCerts.Thumbprints.Tests/Soenneker.Cloudflare.Runners.OriginCerts.Thumbprints.Tests.csproj --configuration Release --no-build --no-restore --verbosity minimal
 
       - name: Pack
         run: dotnet pack src/Soenneker.Cloudflare.Runners.OriginCerts.Thumbprints/Soenneker.Cloudflare.Runners.OriginCerts.Thumbprints.csproj --configuration Release --no-build --no-restore --output . --verbosity minimal
