@@ -1,16 +1,15 @@
-﻿using Soenneker.Tests.FixturedUnit;
-using Xunit;
+using Soenneker.Tests.HostedUnit;
 
 namespace Soenneker.Cloudflare.Runners.OriginCerts.Thumbprints.Tests;
 
-[Collection("Collection")]
-public sealed class OriginCertsThumbprintsRunnerTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class OriginCertsThumbprintsRunnerTests : HostedUnitTest
 {
-    public OriginCertsThumbprintsRunnerTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public OriginCertsThumbprintsRunnerTests(Host host) : base(host)
     {
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
 
