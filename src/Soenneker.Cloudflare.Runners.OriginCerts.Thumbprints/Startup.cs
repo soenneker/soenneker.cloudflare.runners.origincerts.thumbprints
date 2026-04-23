@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using Soenneker.Cloudflare.OriginCerts.Fetcher.Registrars;
 using Soenneker.Managers.Runners.Registrars;
 
@@ -18,8 +18,8 @@ public static class Startup
     public static IServiceCollection SetupIoC(this IServiceCollection services)
     {
         services.AddHostedService<ConsoleHostedService>()
-                .AddCloudflareOriginCertFetcherAsScoped()
-                .AddRunnersManagerAsScoped();
+                .AddCloudflareOriginCertFetcherAsSingleton()
+                .AddRunnersManagerAsSingleton();
 
         return services;
     }
