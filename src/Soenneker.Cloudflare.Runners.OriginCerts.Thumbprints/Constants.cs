@@ -8,7 +8,7 @@ public static class Constants
     /// <summary>
     /// The file name.
     /// </summary>
-    public const string FileName = "cloudflareorigincerts.txt";
+    public const string FileName = "cloudflareorigincerts.pem";
     /// <summary>
     /// The library.
     /// </summary>

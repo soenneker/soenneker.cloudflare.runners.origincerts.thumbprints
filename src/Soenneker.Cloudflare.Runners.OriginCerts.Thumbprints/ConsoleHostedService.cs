@@ -7,7 +7,6 @@ using Soenneker.Managers.Runners.Abstract;
 using Soenneker.Utils.File.Abstract;
 using Soenneker.Utils.Path.Abstract;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
@@ -55,11 +54,11 @@ public sealed class ConsoleHostedService : IHostedService
 
                 try
                 {
-                    List<string> thumbprints = await _cloudflareOriginCertFetcher.GetSharedAopThumbprints(cancellationToken).NoSync();
+                    string certificatePem = await _cloudflareOriginCertFetcher.GetSharedAopCertificatePem(cancellationToken).NoSync();
 
                     string tempFilePath = await _pathUtil.GetRandomTempFilePath(".txt", cancellationToken).NoSync();
 
-                    await _fileUtil.WriteAllLines(tempFilePath, thumbprints, true, cancellationToken).NoSync();
+                    await _fileUtil.Write(tempFilePath, certificatePem, true, cancellationToken).NoSync();
 
                     await _runnersManager.AddFileAtPathToRepoIfNeeded(tempFilePath, Constants.FileName, Constants.Library,
                         $"https://github.com/soenneker/{Constants.Library}", cancellationToken);
