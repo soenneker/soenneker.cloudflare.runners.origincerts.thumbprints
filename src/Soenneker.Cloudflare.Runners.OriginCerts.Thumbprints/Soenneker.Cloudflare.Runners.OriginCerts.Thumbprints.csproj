@@ -42,7 +42,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Cloudflare.OriginCerts.Fetcher" Version="4.0.192" />
+        <PackageReference Include="Soenneker.Cloudflare.OriginCerts.Fetcher" Version="4.0.193" />
         <PackageReference Include="Soenneker.Extensions.LoggerConfiguration" Version="4.0.1406" />
         <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.12" />
         <PackageReference Include="Soenneker.Managers.Runners" Version="4.0.2576" />
